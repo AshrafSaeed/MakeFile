@@ -1,0 +1,19 @@
+{
+    "name": "AshrafSaeed/MakeFile",
+    "description": "This is module send text message from laravel app from multiple opperaters",
+    "type": "laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ashraf Saeed",
+            "email": "avanix.sol@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AshrafSaeed\\MakeFile\\": "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
