@@ -1,0 +1,19 @@
+<?php
+
+namespace DummyNamespace;
+
+
+class DummyClass extends AnotherClass
+{
+	
+	function __construct(argument)
+	{
+		# code...
+	}
+
+
+	public function FunctionName($value='')
+	{
+		# code...
+	}
+}

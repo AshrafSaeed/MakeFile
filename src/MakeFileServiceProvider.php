@@ -9,13 +9,6 @@ use Illuminate\Support\ServiceProvider;
 class MakeFileServiceProvider extends ServiceProvider
 {
 
-	/**
-     * Indicates if loading of the provider is deferred.
-     *
-     * @var bool
-     */
-    //protected $defer = true;
-
     /**
      * creating registration of textmessage in booting of servicesprovider.
      *
@@ -23,8 +16,8 @@ class MakeFileServiceProvider extends ServiceProvider
      */
     public function boot() {
 
-        $this->publishes([
-            __DIR__.'/../config/makefile.php' => config_path('makefile.php'),
+        $this->commands([
+            MakeFileClient::class
         ]);
 
     }
@@ -36,25 +29,7 @@ class MakeFileServiceProvider extends ServiceProvider
      */
     public function register() {   
 
-        $this->app->bind(MakeFileClient::class, function() {
-
-            dd('dd');
-
-            return new MakeFileClient();
-        });
-
     }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    // public function provides() {
-
-    //     return [MakeFileClient::class];
-    
-    // }
 
 }
 
